@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support Request Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form id="supportForm">
+    <h2>Support Request Form</h2>
+
+    <label>Problem Type:</label>
+    <select id="problemType" required>
+      <option value="">--Select Problem--</option>
+      <option value="টাকা পাইনি">টাকা পাইনি</option>
+      <option value="নাম্বার ভুল দিয়েছি">নাম্বার ভুল দিয়েছি</option>
+      <option value="ইউজার আইডি ভুল">ইউজার আইডি ভুল</option>
+      <option value="বট থেকে টাকা কাটা গেছে">বট থেকে টাকা কাটা গেছে</option>
+    </select>
+
+    <label>Telegram ID/Phone Number:</label>
+    <input type="text" id="userContact" required />
+
+    <label>Bkash Number (if applicable):</label>
+    <input type="text" id="bkashNumber" />
+
+    <label>Screenshot (optional):</label>
+    <input type="file" id="screenshot" accept="image/*" />
+
+    <button type="submit">Submit</button>
+
+    <p id="statusMessage"></p>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js"></script>
+  <script src="userForm.js"></script>
+</body>
+  </html>
